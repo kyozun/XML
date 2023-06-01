@@ -31,7 +31,7 @@ public class JSONManagement {
             reader.close();
 
             JSONArray JSONArray = new JSONArray(response.toString());
-            System.out.print("Inserting.......");
+            System.out.println("Inserting.......");
             for (int i = 0; i < JSONArray.length(); i++) {
                 JSONObject todo = (JSONObject) JSONArray.get(i);
                 Todo newTodo = new Todo(Integer.parseInt(todo.get("userId").toString()), Integer.parseInt(todo.get("id").toString()), todo.get("title").toString(), todo.get("completed").toString());
